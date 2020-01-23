@@ -1,1 +1,8 @@
-<p>equation works!</p>
+<form [formGroup]="mathForm">
+  {{ a }} + {{ b }} =
+  <input type="text" formControlName="answer">
+</form>
+
+{{ mathForm.valid }}
+{{ mathForm.value | json }}
+{{ mathForm.errors | json }}
